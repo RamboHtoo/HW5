@@ -89,6 +89,16 @@ void TestIsPresentSizeAndOrder() {
 	cout << "Testing IsPresent, Size, and Order..." << endl;
 	
 	// more tests go here!
+	Graph g;
+
+	g.AddNode(5);
+	g.AddNode(8);
+
+	assert(g.IsPresent(5) == true);
+	assert(g.IsPresent(8) == true);
+	assert(g.IsPresent(20) == false);
+
+	assert(g.Order() == 2);
 
 	Graph g2 = Graph();
 	assert(g2.Size() == 0);
